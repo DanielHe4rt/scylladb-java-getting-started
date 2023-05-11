@@ -10,7 +10,7 @@ import java.util.List;
 public class ListSongsCommand implements CommandInterface {
     @Override
     public void execute(Session session, String[] args) {
-        ResultSet results = session.execute("SELECT * FROM vaicaralho.songs PER PARTITION LIMIT 1");
+        ResultSet results = session.execute("SELECT * FROM media_player.songs PER PARTITION LIMIT 1");
         List<Row> resultsmemo = results.all();
 
         if (resultsmemo.size() == 0) {

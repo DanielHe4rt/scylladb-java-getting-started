@@ -29,7 +29,7 @@ public class InsertSongCommand implements CommandInterface {
 
 
         PreparedStatement statement = session.prepare(
-                "INSERT INTO vaicaralho.songs (id, title, artist, album, created_at, " +
+                "INSERT INTO media_player.songs (id, title, artist, album, created_at, " +
                 "updated_at) VALUES (?,?,?,?,?,?)"
         );
 

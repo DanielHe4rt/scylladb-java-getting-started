@@ -27,7 +27,7 @@ public class MigrateCommand implements CommandInterface {
 
         migrationCqls.put(
                 "keyspace",
-                createKeyspace("vaicaralhows")
+                createKeyspace("media_player")
                         .ifNotExists()
                         .with()
                         .replication(ImmutableMap.of("class", "NetworkTopologyStrategy", "replication_factor", 3))
@@ -37,7 +37,7 @@ public class MigrateCommand implements CommandInterface {
 
         migrationCqls.put(
                 "table songs",
-                createTable("vaicaralhows", "songs1")
+                createTable("media_player", "songs")
                         .ifNotExists()
                         .addPartitionKey("id", DataType.bigint())
                         .addClusteringColumn("updated_at", DataType.timestamp())
