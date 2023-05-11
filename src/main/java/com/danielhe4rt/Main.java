@@ -20,7 +20,7 @@ public class Main {
         Cluster cluster = Cluster.builder()
                 .addContactPoints("node-0.aws_us_east_1.7207ca5a8fdc45f2b03f.clusters.scylla.cloud", "node-1.aws_us_east_1.7207ca5a8fdc45f2b03f.clusters.scylla.cloud", "node-2.aws_us_east_1.7207ca5a8fdc45f2b03f.clusters.scylla.cloud")
                 .withLoadBalancingPolicy(DCAwareRoundRobinPolicy.builder().withLocalDc("AWS_US_EAST_1").build()) // your local data center
-                .withAuthProvider(new PlainTextAuthProvider("scylla", "7H8VbxJTuG2flYK"))
+                .withAuthProvider(new PlainTextAuthProvider("scylla", "lalala"))
                 .build();
 
         Session session = cluster.connect();
